@@ -77,8 +77,9 @@ jobs:
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         mv mt7621_mikrotik_routerboard-750gr3.dts openwrt/target/linux/ramips/dts/mt7621_mikrotik_routerboard-750gr3.dts
-     #   chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
+     #   chmod +x ./customize.sh && ./customize.sh
+     #   cd openwrt && make defconfig
         
     - name: Download package
       working-directory: ./openwrt
