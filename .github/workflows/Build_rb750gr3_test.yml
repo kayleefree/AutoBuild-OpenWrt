@@ -90,5 +90,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt
+        name: rb750gr3_test
         path: openwrt/bin
