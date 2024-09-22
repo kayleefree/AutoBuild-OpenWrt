@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_750gr3_test
+name: extract file
 
 # Add a button to trigger the workflow
 on: 
@@ -16,8 +16,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     -name: Etract Files from Github
-      uses:actions/upload-artifact@master
+    - name : extract
+      uses: actions/upload-artifact@master
       with:
+
         name: etrackt files
         path: openwrt/target/linux/ramips
