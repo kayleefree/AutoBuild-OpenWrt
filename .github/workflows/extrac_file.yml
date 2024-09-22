@@ -14,8 +14,9 @@ on:
 
 jobs:
   build:
-    runs-on:ubuntu-latest
-     -name:Etract Files from Github
+    runs-on: ubuntu-latest
+    steps:
+     -name: Etract Files from Github
       uses:actions/upload-artifact@master
       with:
         name: etrackt files
