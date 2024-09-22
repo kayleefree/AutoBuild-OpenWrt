@@ -1,0 +1,23 @@
+#=================================================
+# Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
+# Author: eSirPlayground
+# Youtube Channel: https://goo.gl/fvkdwm 
+#=================================================
+
+name: Build_750gr3_test
+
+# Add a button to trigger the workflow
+on: 
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    - name : Etract Files from Github
+      uses: actions/upload-artifact@master
+      with:
+        name: etrackt files
+        path: openwrt/target/linux/ramips
