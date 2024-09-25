@@ -19,7 +19,7 @@
 
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x10000000>;
+		reg = <0x0 0x08000000>;
 	};
 
 	chosen {
@@ -101,7 +101,7 @@
 				};
 
 				hard_config: partition@f000 {
-					label = "hard_config_jane";
+					label = "hard_config";
 					reg = <0xf000 0x1000>;
 				};
 
@@ -131,7 +131,7 @@
 };
 
 &ethernet {
-	mtd-mac-address = <&hard_config_jane 0x0010>;
+	mtd-mac-address = <&hard_config 0x0010>;
 	mtd-mac-address-increment = <1>;
 };
 
