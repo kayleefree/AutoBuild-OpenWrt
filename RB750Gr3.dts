@@ -131,7 +131,7 @@
 };
 
 &ethernet {
-	mtd-mac-address = <&hard_config 0x0010>;
+	mtd-mac-address = <&hard_config_jane 0x0010>;
 	mtd-mac-address-increment = <1>;
 };
 
