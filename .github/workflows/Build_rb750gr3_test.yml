@@ -71,9 +71,10 @@ jobs:
     - name: Configuration Customization - Build_rb750gr3_test
       env:
         CONFIG_FILE: 'rb750gr3_19.07.config'
+        DTS_FILE: 'RB750Gr3.dts'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        mv RB750Gr3.dts openwrt/target/linux/ramips/dts/RB750Gr3.dts
+        mv $DTS_FILE openwrt/target/linux/ramips/dts/$DTS_FILE
         #chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
         
@@ -91,5 +92,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: rb750gr3_19.07
+        name: rb750gr3_19.07_mtd-rw
         path: openwrt/bin
